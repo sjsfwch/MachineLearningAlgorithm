@@ -1,10 +1,8 @@
 import numpy as np
 
 
-def perceptron(dataArray, labelArray, maxIterNum=66, step=0.01):
+def perceptron(dataMat, labelMat, maxIterNum=66, step=0.01):
     print('start!!')
-    dataMat = np.mat(dataArray)  #转换成矩阵，运算比较方便
-    labelMat = np.mat(labelArray).T
     m, n = np.shape(dataMat)
     w = np.zeros((1, n))  #初始化w,b参数
     b = 0
